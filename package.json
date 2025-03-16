@@ -1,0 +1,41 @@
+{
+  "name": "@artie-owlet/node-app-template",
+  "version": "0.0.1-dev.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build-release": "tsc -p tsconfig-release.json",
+    "build-tests": "yarn tsc -p test/tsconfig.json --noEmit",
+    "clean": "rm -rf build/",
+    "coverage": "c8 yarn test",
+    "dev": "ts-node src/index.ts",
+    "doc": "typedoc",
+    "lint": "eslint src/",
+    "lint-fix": "eslint --fix src/",
+    "start": "node dist/index.js",
+    "test": "mocha test/",
+    "test-release": "yarn build-tests && c8 mocha --config .mocharc-release.yml test/"
+  },
+  "packageManager": "yarn@4.5.3",
+  "devDependencies": {
+    "@artie-owlet/chifir": "^2.0.0",
+    "@eslint/js": "^9.16.0",
+    "@stylistic/eslint-plugin": "^2.11.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.10.1",
+    "@typescript-eslint/types": "^8.16.0",
+    "c8": "^10.1.2",
+    "eslint": "^9.16.0",
+    "eslint-plugin-perfectionist": "^4.1.2",
+    "mocha": "^10.8.2",
+    "ts-node": "^10.9.2",
+    "typedoc": "^0.27.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.16.0"
+  }
+}
