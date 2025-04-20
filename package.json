@@ -44,5 +44,8 @@
     "typedoc": "^0.28.2",
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.30.1"
+  },
+  "dependencies": {
+    "pgsql-ast-parser": "^12.0.1"
   }
 }
